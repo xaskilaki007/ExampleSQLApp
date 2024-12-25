@@ -17,6 +17,12 @@ namespace ExampleSQLApp
             InitializeComponent();
             this.passField.AutoSize = false;
             this.passField.Size = new Size(this.passField.Size.Width, 64);
+
+            // Устанавливаем символ для замены вводимых символов
+            this.passField.PasswordChar = '•';
+
+            // Убедимся, что поле пароля используется только для текста
+            this.passField.UseSystemPasswordChar = false; // Должно быть отключено, если используем PasswordChar
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
